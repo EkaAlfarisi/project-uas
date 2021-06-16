@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 16 Jun 2021 pada 07.21
--- Versi server: 10.1.38-MariaDB
--- Versi PHP: 7.3.2
+-- Generation Time: Jun 16, 2021 at 07:27 PM
+-- Server version: 10.4.10-MariaDB
+-- PHP Version: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `loker`
+-- Table structure for table `loker`
 --
 
 CREATE TABLE `loker` (
@@ -38,7 +38,7 @@ CREATE TABLE `loker` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengajuan`
+-- Table structure for table `pengajuan`
 --
 
 CREATE TABLE `pengajuan` (
@@ -49,7 +49,7 @@ CREATE TABLE `pengajuan` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengguna`
+-- Table structure for table `pengguna`
 --
 
 CREATE TABLE `pengguna` (
@@ -57,25 +57,26 @@ CREATE TABLE `pengguna` (
   `nama` varchar(50) NOT NULL,
   `alamat` varchar(100) NOT NULL,
   `no_telpon` varchar(20) NOT NULL,
-  `tanggal_lahir` date NOT NULL,
-  `pendidikan` varchar(20) NOT NULL,
-  `jurusan` varchar(50) NOT NULL,
-  `nama_lembaga_pendidikan` varchar(50) NOT NULL,
+  `tanggal_lahir` date DEFAULT NULL,
+  `pendidikan` varchar(20) DEFAULT NULL,
+  `jurusan` varchar(50) DEFAULT NULL,
+  `nama_lembaga_pendidikan` varchar(50) DEFAULT NULL,
   `username` varchar(20) NOT NULL,
-  `password` varchar(10) NOT NULL
+  `password` varchar(10) NOT NULL,
+  `level` varchar(20) NOT NULL DEFAULT 'user'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `pengguna`
+-- Dumping data for table `pengguna`
 --
 
-INSERT INTO `pengguna` (`id_pengguna`, `nama`, `alamat`, `no_telpon`, `tanggal_lahir`, `pendidikan`, `jurusan`, `nama_lembaga_pendidikan`, `username`, `password`) VALUES
-(1, 'saya', 'saya', '098', '2021-06-01', 's1', 'komputer', 'unej', 'saya', 'saya');
+INSERT INTO `pengguna` (`id_pengguna`, `nama`, `alamat`, `no_telpon`, `tanggal_lahir`, `pendidikan`, `jurusan`, `nama_lembaga_pendidikan`, `username`, `password`, `level`) VALUES
+(1, 'saya', 'saya', '098', '2021-06-01', 's1', 'komputer', 'unej', 'saya', 'saya', 'user');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `perusahaan`
+-- Table structure for table `perusahaan`
 --
 
 CREATE TABLE `perusahaan` (
@@ -92,53 +93,53 @@ CREATE TABLE `perusahaan` (
 --
 
 --
--- Indeks untuk tabel `loker`
+-- Indexes for table `loker`
 --
 ALTER TABLE `loker`
   ADD PRIMARY KEY (`id_data`);
 
 --
--- Indeks untuk tabel `pengajuan`
+-- Indexes for table `pengajuan`
 --
 ALTER TABLE `pengajuan`
   ADD PRIMARY KEY (`id_data`);
 
 --
--- Indeks untuk tabel `pengguna`
+-- Indexes for table `pengguna`
 --
 ALTER TABLE `pengguna`
   ADD PRIMARY KEY (`id_pengguna`);
 
 --
--- Indeks untuk tabel `perusahaan`
+-- Indexes for table `perusahaan`
 --
 ALTER TABLE `perusahaan`
   ADD PRIMARY KEY (`id_perusahaan`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `loker`
+-- AUTO_INCREMENT for table `loker`
 --
 ALTER TABLE `loker`
   MODIFY `id_data` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `pengajuan`
+-- AUTO_INCREMENT for table `pengajuan`
 --
 ALTER TABLE `pengajuan`
   MODIFY `id_data` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `pengguna`
+-- AUTO_INCREMENT for table `pengguna`
 --
 ALTER TABLE `pengguna`
   MODIFY `id_pengguna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `perusahaan`
+-- AUTO_INCREMENT for table `perusahaan`
 --
 ALTER TABLE `perusahaan`
   MODIFY `id_perusahaan` int(11) NOT NULL AUTO_INCREMENT;
