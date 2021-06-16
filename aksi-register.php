@@ -14,16 +14,16 @@ if(isset($_POST['nama']) && isset($_POST['alamat']) && isset($_POST['no_telp']) 
 
     if($input){
         echo "Registrasi berhasil. Silahkan login";
-        echo "<a href='index.php'>Login</a>";
+        echo "<a class='btn blue' href='index.php'>Login</a>";
     }
     else{
         echo "GAGAL MENAMBAHKAN DATA";
-        echo "<a href='index.php'>Kembali</a>";
+        echo "<a class='btn blue' href='index.php'>Kembali</a>";
     }
 }
 else
 {
     echo "Isikan Semua Data";
-    echo "<a href='register.php'>Kembali</a>";
+    echo "<a class='btn blue' href='register.php'>Kembali</a>";
 }
 ?>

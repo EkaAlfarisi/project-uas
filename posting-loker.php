@@ -1,5 +1,6 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>FORM REGISTER</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -15,15 +16,18 @@
   <br>
   <form action="aksi-loker.php" method="post">
     <div class="input-field">
-      <input type="text" name="nama-perusahaan" id="nama-perusahaan" required>
+      <input type="text" name="nama-perusahaan" id="nama-perusahaan"
+             value="<?php if (isset($_SESSION['nama'])) echo $_SESSION['nama']; ?>" disabled>
       <label for="nama-perusahaan">NAMA PERUSAHAAN</label>
     </div>
     <div class="input-field">
-      <input type="text" name="alamat" id="alamat" required>
+      <input type="text" name="alamat" id="alamat"
+             value="<?php if (isset($_SESSION['nama'])) echo $_SESSION['alamat']; ?>" disabled>
       <label for="alamat">ALAMAT</label>
     </div>
     <div class="input-field">
-      <input type="text" name="no_telp" id="no_telp" required>
+      <input type="text" name="no_telp" id="no_telp"
+             value="<?php if (isset($_SESSION['nama'])) echo $_SESSION['no_telp']; ?>" disabled>
       <label for="no_telp">NO TELPON</label>
     </div>
     <div class="input-field">

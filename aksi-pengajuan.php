@@ -13,13 +13,13 @@ if (isset($_POST['tanggal_lahir']) && isset($_POST['pendidikan']) && isset($_POS
     $pengajuan = $mysqli->query("INSERT INTO pengajuan VALUES(null, '$id');;") or die($mysqli->connect_error);
     if ($input) {
         echo "DATA PENGAJUAN BERHASIL DITAMBAHKAN";
-        echo "<a href='pengajuan.php'>Kembali</a>";
+        echo "<a class='btn blue' href='pengajuan.php'>Kembali</a>";
     } else {
         echo "GAGAL MENAMBAHKAN DATA";
-        echo "<a href='pengajuan.php'>Kembali</a>";
+        echo "<a class='btn blue' href='pengajuan.php'>Kembali</a>";
     }
 } else {
     echo "Isikan Semua Data";
-    echo "<a href='pengajuan.php'>Kembali</a>";
+    echo "<a class='btn blue' href='pengajuan.php'>Kembali</a>";
 }
 ?>
