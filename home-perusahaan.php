@@ -12,6 +12,7 @@
   <br>
   <a class="btn green waves-effect waves-light" href="posting-loker.php">AJUKAN LOKER</a>
   <a class="btn green waves-effect waves-light" href="daftar-pelamar.php">CARI KARYAWAN</a>
+  <a class="btn green waves-effect waves-light" href="logout.php">LOGOUT</a>
 </div>
 
 
