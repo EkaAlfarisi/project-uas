@@ -13,6 +13,7 @@
   <br>
   <a class="btn green waves-effect waves-light" href="pengajuan.php">AJUKAN DIRI</a>
   <a class="btn green waves-effect waves-light" href="daftar-loker.php">INFO LOKER</a>
+  <a class="btn green waves-effect waves-light" href="logout.php">LOGOUT</a>
 </div>
 
 
