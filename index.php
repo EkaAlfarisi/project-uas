@@ -13,8 +13,10 @@ if (isset($_POST['login'])) {
             $_SESSION['nama'] = $us[1];
             $_SESSION['alamat'] = $us[2];
             $_SESSION['no_telp'] = $us[3];
-            if ($us[11] === 'user') header('Location: home-pelamar.php');
-            else if ($us[11] === 'perusahaan') header('Location: home-perusahaan.php');
+            Print_r($c);
+            
+            if ($us[10] === 'user') header('Location: home-pelamar.php');
+            else if ($us[10] === 'perusahaan') header('Location: home-perusahaan.php');
         } else {
             $msg = false;
         }
